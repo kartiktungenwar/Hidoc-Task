@@ -18,6 +18,7 @@ import com.hidoc_task.data.APIUrl;
 import com.hidoc_task.model.BooksModels;
 import com.hidoc_task.model.Item;
 import com.hidoc_task.model.ResponseModel;
+import com.satsuware.usefulviews.LabelledSpinner;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeoutException;
@@ -67,6 +68,9 @@ public class FragmentViewBooks extends Fragment {
 
 
         callBooksList();
+
+        LabelledSpinner yourSpinner = (LabelledSpinner) view.findViewById(R.id.your_labelled_spinner);
+        yourSpinner.setItemsArray(R.array.planets_array);
 
         return view;
     }
